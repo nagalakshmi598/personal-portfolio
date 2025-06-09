@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NagaLakshmi Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #f0f8ff, #e0f7fa);
+      color: #333;
+    }
+    .card {
+      background-color: #ffffff;
+      width: 90%;
+      max-width: 1000px;
+      margin: 4rem auto;
+      padding: 3rem 4rem;
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+      border-radius: 20px;
+      text-align: center;
+      position: relative;
+      transition: transform 0.4s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card h1 {
+      font-size: 2.8rem;
+      color: #1a237e;
+      margin-bottom: 0.5rem;
+    }
+    .card p.tagline {
+      font-size: 1.2rem;
+      color: #555;
+      margin-bottom: 2rem;
+    }
+    .card-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+    }
+    .info {
+      flex: 1 1 60%;
+      text-align: left;
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+    .info p {
+      margin: 0.5rem 0;
+    }
+    .info strong {
+      display: inline-block;
+      width: 160px;
+      color: #333;
+    }
+    .preview-image {
+      flex: 1 1 30%;
+      max-width: 180px;
+      border-radius: 12px;
+      border: 2px solid #ccc;
+    }
+    .open-link {
+      margin-top: 2.5rem;
+      display: inline-block;
+      padding: 1rem 2.5rem;
+      background: #00bcd4;
+      color: white;
+      border: none;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      transition: background 0.3s ease;
+    }
+    .open-link:hover {
+      background: #0097a7;
+    }
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to right, #37474f, #546e7a);
+      color: white;
+      z-index: 1000;
+      padding: 3rem;
+      overflow-y: auto;
+    }
+    .overlay h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 0.5rem;
+    }
+    .overlay h3 {
+      margin-top: 2rem;
+      border-bottom: 1px solid #bbb;
+      padding-bottom: 0.3rem;
+    }
+    .overlay ul {
+      list-style: none;
+      padding-left: 1rem;
+      font-size: 1.1rem;
+    }
+    .overlay li {
+      margin-bottom: 0.6rem;
+    }
+    .highlight {
+      background-color: #ffeb3b;
+      padding: 0 5px;
+      border-radius: 4px;
+      color: #333;
+    }
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #fff;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+    .close-btn:hover {
+      color: #ff4081;
+    }
+    a.project-link {
+      color: #ffeb3b;
+      text-decoration: underline;
+    }
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .badge {
+      background: #00bcd4;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+    .testimonial {
+      margin-top: 2rem;
+      padding: 1.5rem;
+      background: #ffffff33;
+      border-left: 4px solid #ffeb3b;
+      border-radius: 10px;
+      font-style: italic;
+      font-size: 1.05rem;
+    }
+    .availability {
+      margin-top: 2rem;
+      background: #66bb6a;
+      padding: 0.8rem 1.2rem;
+      border-radius: 10px;
+      display: inline-block;
+      font-weight: bold;
+      color: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+  </style>
+  <script>
+    function showDetails() {
+      document.getElementById('overlay').style.display = 'block';
+    }
+    function closeDetails() {
+      document.getElementById('overlay').style.display = 'none';
+    }
+  </script>
+</head>
+<body>
+
+  <div class="card">
+    <h1>NagaLakshmi Mangina</h1>
+    <p class="tagline">2025 Graduate | Java Developer | Web Enthusiast | AI Explorer</p>
+    <div class="card-content">
+      <div class="info">
+        <p><strong>ROLE:</strong> Aspiring Software Developer (Fresher)</p>
+        <p><strong>SPECIALIZATION:</strong> Java, Web Technologies, Artificial Intelligence</p>
+        <p><strong>GOAL:</strong> Seeking full-time opportunities to apply my skills and contribute to innovative development teams.</p>
+         </div>
+      <img src="nagalakshmi.jpg" alt="Portfolio Design" class="preview-image">
+    </div>
+    <a class="open-link" href="#" onclick="showDetails()">Explore My Resume & Projects</a>
+  </div>
+
+  <div id="overlay" class="overlay">
+    <span class="close-btn" onclick="closeDetails()">&times;</span>
+    <h2>Discover My Journey: Skills, Projects & Credentials</h2>
+    <div class="availability">✅ Open to Work & Immediate Joining</div>
+
+    <h3>Contact</h3>
+    <ul>
+      <li><strong>Email:</strong> <span class="highlight">manginanagalakshmi98@gmail.com</span></li>
+      <li><strong>Phone:</strong> <span class="highlight">+91 6281722615</span></li>
+      <li><strong>Location:</strong> Relangi, Andhra Pradesh - 534225</li>
+    </ul>
+
+    <h3>Education</h3>
+    <ul>
+      <li>B.Tech in CSE – Sasi Institute of Technology (2021–2025) | GPA: 8.63</li>
+      <li>Intermediate (MPC) – Pragati Junior College (2019–2021) | GPA: 9.2</li>
+      <li>SSC – Bhashyam School (2018–2019) | GPA: 9.5</li>
+    </ul>
+
+    <h3>Skills & Tools</h3>
+    <div class="badges">
+      <div class="badge">Java</div>
+      <div class="badge">HTML</div>
+      <div class="badge">CSS</div>
+      <div class="badge">JavaScript</div>
+      <div class="badge">Python</div>
+      <div class="badge">SQL</div>
+      <div class="badge">GitHub</div>
+      <div class="badge">VS Code</div>
+      <div class="badge">Eclipse</div>
+    </div>
+
+    <h3>Projects</h3>
+    <ul>
+      <li><strong>Admin Dashboard Template:</strong> Built using HTML, CSS, JS & Bootstrap – <a href="https://github.com/nagalakshmi598/Admin-Dashboard-Template" class="project-link" target="_blank">View Project</a></li>
+      <li><strong>NagaLakshmi Personal Portfolio Website:</strong> Created to showcase resume and development skills – <a href="https://github.com/nagalakshmi598/NagaLakshmi-personal-_portfolio_website/edit/main/Portfolio.html" class="project-link" target="_blank">View Project</a></li>
+    </ul>
+
+    <h3>Certifications & Achievements</h3>
+    <ul>
+      <li>Full Stack Java Internship – Skill Dzier</li>
+      <li>AI-ML Virtual Internship – AWS Academy</li>
+      <li>PCAP: Programming Essentials in Python – Cisco Networking Academy</li>
+      <li>Problem Solver – Gold Badge on Codechef</li>
+    </ul>
+
+</body>
+</html>
